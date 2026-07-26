@@ -71,6 +71,7 @@ plt.hist(df["Age"], bins=15, color="blue", edgecolor="white")
 plt.title("Age Distributed of titanic Passengers ")
 plt.xlabel("Age")
 plt.ylabel("number of Passengers")
+plt.savefig("age_distribution.png", bbox_inches="tight")
 plt.show()
 
 ############ Passenger Share by Embarkation Port ##############
