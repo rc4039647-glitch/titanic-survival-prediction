@@ -1,5 +1,11 @@
 # 🚢 Titanic Survival Prediction
 
+## 🌐 Live Demo
+
+**Live App:** https://your-app-name.streamlit.app
+
+---
+
 ## 📌 Project Overview
 
 This project predicts whether a passenger would have survived the Titanic disaster using a Machine Learning model built with Logistic Regression.
