@@ -156,6 +156,12 @@ print("Age median learned from TRAINING data only:", aga_median)
 model = LogisticRegression(max_iter=1000, random_state=Random_State)
 model.fit(x_train, y_train)
 
+
+import joblib
+
+joblib.dump(model, "titanic_model.pkl")
+joblib.dump(features, "features.pkl")
+
 ########### Model Evaluation ########
 
 y_pred = model.predict(x_test)
@@ -182,7 +188,7 @@ print(coef_df)
 coef_df = pd.DataFrame({'feature': x.columns, 'coef': model.coef_[0]}).sort_values('coef', ascending=False)
 print(coef_df)
 
-print("""
+"""
 Key factors that increased survival chances:
 - Being female had the strongest positive effect on survival, consistent
   with the 'women and children first' evacuation policy.
@@ -202,8 +208,7 @@ Key factors that decreased survival chances:
 Overall, Sex and Title (a proxy for age/sex/marital status) are the two
 dominant survival factors in this dataset, matching the historical account
 of the 'women and children first' policy.
-""")
-
+"""
 print("Shape:", df.shape)
 
 
