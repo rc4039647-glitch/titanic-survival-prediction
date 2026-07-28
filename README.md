@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-**Live App:** https://your-app-name.streamlit.app
+**Live App: https://titanic-survival-prediction-aiml.streamlit.app/ **
 
 ---
 
