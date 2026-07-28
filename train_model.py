@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
@@ -11,9 +10,6 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
-
-
-
 
 df = pd.read_csv('titanic.csv')
 print(df.info)
@@ -188,27 +184,6 @@ print(coef_df)
 coef_df = pd.DataFrame({'feature': x.columns, 'coef': model.coef_[0]}).sort_values('coef', ascending=False)
 print(coef_df)
 
-"""
-Key factors that increased survival chances:
-- Being female had the strongest positive effect on survival, consistent
-  with the 'women and children first' evacuation policy.
-- Having a recorded cabin (has_cabin=1) was linked to higher survival,
-  since it correlates with higher passenger class and proximity to lifeboats.
-- Title 'Mrs' (married women) had a positive effect on survival odds.
-
-Key factors that decreased survival chances:
-- Title 'Mr' had by far the strongest negative effect, showing adult men
-  had much lower survival odds than any other group.
-- Higher Pclass number (3rd class) decreased survival odds, likely due to
-  distance from lifeboats and lower evacuation priority.
-- Being alone (is_alone=1) and larger family_size both showed negative
-  effects, suggesting solo travelers and very large families struggled
-  more during evacuation.
-
-Overall, Sex and Title (a proxy for age/sex/marital status) are the two
-dominant survival factors in this dataset, matching the historical account
-of the 'women and children first' policy.
-"""
 print("Shape:", df.shape)
 
 
